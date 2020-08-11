@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2Dinsdag", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening2", "Oefening2\Oefening2.csproj", "{6FBD2101-8ADC-4B05-9668-7F499661F6C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefeing4", "Oefeing4\Oefeing4.csproj", "{6B0F6D8B-4553-43B8-BF0D-19625ACD483A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oefening5", "Oefening5\Oefening5.csproj", "{D2458DE7-5710-4492-98C0-7A48135E3870}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{6FBD2101-8ADC-4B05-9668-7F499661F6C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FBD2101-8ADC-4B05-9668-7F499661F6C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FBD2101-8ADC-4B05-9668-7F499661F6C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0F6D8B-4553-43B8-BF0D-19625ACD483A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0F6D8B-4553-43B8-BF0D-19625ACD483A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0F6D8B-4553-43B8-BF0D-19625ACD483A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0F6D8B-4553-43B8-BF0D-19625ACD483A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2458DE7-5710-4492-98C0-7A48135E3870}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2458DE7-5710-4492-98C0-7A48135E3870}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2458DE7-5710-4492-98C0-7A48135E3870}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2458DE7-5710-4492-98C0-7A48135E3870}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
