@@ -11,16 +11,16 @@ using System.IO;
 
 namespace Oefening5
 {
-    public partial class Form1 : Form
+    public partial class txtFileName : Form
     {
-        public Form1()
+        public txtFileName()
         {
             InitializeComponent();
-            if (!File.Exists(fileName))
-            {
-                File.Create(fileName);
-
-            }
+            //if (!File.Exists(fileName))
+            //{
+            //    File.Create(fileName);
+            //igy is lehet
+            //}
         }
         public string fileName = "text.txt";
         private void btAdd_Click(object sender, EventArgs e)
@@ -36,9 +36,28 @@ namespace Oefening5
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            using (StreamWriter writer = new StreamWriter(fileName))
+            using (StreamWriter writer = new StreamWriter($"{textName.Text}.txt")) // ezzel irunk a fajlba
             {
-               
+                foreach (var item in listBox1.Items) // minden elemet hozza adunk a fajlhoz
+                {
+                    writer.WriteLine(item);
+                }
+            }
+        }
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            if (!File.Exists($"{textName.Text}.txt"))
+            {
+                File.Create($"{textName.Text}.txt").Dispose(); //Dispose bezarja a fajlt. Mindig be kell zarni kulonben hiba kod lesz
+            }
+            using (StreamReader reader = new StreamReader($"{textName.Text}.txt")) // igy olvasunk ki a fajlbol
+            {
+                while (! reader.EndOfStream) // hozza adjuk az osszes elemet a txt.fajlhoz
+                {
+                    listBox1.Items.Add(reader.ReadLine());
+                }
             }
         }
     }
