@@ -38,8 +38,6 @@
             this.btLami = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.txtBnotitie = new System.Windows.Forms.TextBox();
-            this.txtNotitename = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listBoxNB
@@ -49,10 +47,11 @@
             this.listBoxNB.Name = "listBoxNB";
             this.listBoxNB.Size = new System.Drawing.Size(120, 277);
             this.listBoxNB.TabIndex = 0;
+            this.listBoxNB.SelectedIndexChanged += new System.EventHandler(this.listBoxNB_SelectedIndexChanged);
             // 
             // btVoeg
             // 
-            this.btVoeg.Location = new System.Drawing.Point(12, 371);
+            this.btVoeg.Location = new System.Drawing.Point(12, 325);
             this.btVoeg.Name = "btVoeg";
             this.btVoeg.Size = new System.Drawing.Size(120, 23);
             this.btVoeg.TabIndex = 1;
@@ -62,7 +61,7 @@
             // 
             // btUit
             // 
-            this.btUit.Location = new System.Drawing.Point(12, 400);
+            this.btUit.Location = new System.Drawing.Point(12, 354);
             this.btUit.Name = "btUit";
             this.btUit.Size = new System.Drawing.Size(120, 23);
             this.btUit.TabIndex = 2;
@@ -135,29 +134,11 @@
             this.txtBnotitie.Size = new System.Drawing.Size(191, 282);
             this.txtBnotitie.TabIndex = 9;
             // 
-            // txtNotitename
-            // 
-            this.txtNotitename.Location = new System.Drawing.Point(12, 345);
-            this.txtNotitename.Name = "txtNotitename";
-            this.txtNotitename.Size = new System.Drawing.Size(120, 20);
-            this.txtNotitename.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 326);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Name";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNotitename);
             this.Controls.Add(this.txtBnotitie);
             this.Controls.Add(this.btAdd);
             this.Controls.Add(this.btLami);
@@ -170,6 +151,7 @@
             this.Controls.Add(this.listBoxNB);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,8 +169,6 @@
         private System.Windows.Forms.Button btLami;
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox txtBnotitie;
-        private System.Windows.Forms.TextBox txtNotitename;
-        private System.Windows.Forms.Label label4;
     }
 }
 

@@ -17,7 +17,8 @@ namespace Oefeing4
             InitializeComponent();
         }
 
-        public List<string> NotitieLijst = new List<string>();
+        public List<string> myNotitieLijst = new List<string>();
+        public int teller = 0;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -25,15 +26,8 @@ namespace Oefeing4
 
         private void btVoeg_Click(object sender, EventArgs e)
         {
-            if (txtNotitename.Text != "")
-            {
-                NotitieLijst.Add(txtNotitename.Text);
-                listBoxNB.Items.Add(txtNotitename.Text);
-                txtNotitename.Clear();
-            }
-            //NotitieLijst.Add(txtNotitename.Text);
-            //listBoxNB.Items.Add(txtNotitename.Text);
-            //txtNotitename.Clear();
+            listBoxNB.Items.Add($"Notitie {teller++}");
+            myNotitieLijst.Add(teller.ToString());
         }
 
         private void btLami_Click(object sender, EventArgs e)
@@ -43,18 +37,34 @@ namespace Oefeing4
             btVoeg.Enabled = false;
             btLami.Enabled = false;
             txtBijsc.Enabled = false;
-            txtNotitename.Enabled = false;
+           
         }
 
         private void btAdd_Click(object sender, EventArgs e)
         {
-
+            myNotitieLijst[listBoxNB.SelectedIndex] += " " + txtBijsc.Text;
+            txtBijsc.Clear();
+            txtBnotitie.Text = myNotitieLijst[listBoxNB.SelectedIndex];
 
         }
 
         private void btUit_Click(object sender, EventArgs e)
         {
+            myNotitieLijst.RemoveAt(listBoxNB.SelectedIndex);
             listBoxNB.Items.Remove(listBoxNB.SelectedItem);
+            txtBnotitie.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBoxNB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBoxNB.SelectedIndex >= 0)
+                txtBnotitie.Text = myNotitieLijst[listBoxNB.SelectedIndex];
+
         }
     }
    
